@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="style/style.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+	<script type="text/javascript" src="js/settings.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="icon" href="favicon.png">
+
+	<!-- Load FontAwesome Icons font -->
+    <link rel='stylesheet' href='style/font-awesome.css' type='text/css' media='all'>
+
+	<!-- Page Title -->
+	<title>Hello!</title>
+
+	<!-- ipinfo.io -->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+	<script type="text/javascript">
+		$.get("http://ipinfo.io", function (response) {
+			$("#ip").html(response.ip);
+			$("#hostname").html(response.hostname);
+			$("#org").html(response.org);
+			$("#location").html(response.city + ", " + response.region + ", " + response.country);
+			$("#full").html(JSON.stringify(response, null, 4));
+		}, "jsonp");
+	</script>
+
+	<!-- Bitcoin Widget -->
+	<!-- https://www.bitcoin.com/widgets -->
+	<script>
+  (function(b,i,t,C,O,I,N) {
+    window.addEventListener('load',function() {
+      if(b.getElementById(C))return;
+      I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+      I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+    },false)
+  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+	</script>
+
+<style type="text/css">
+body {
+    background: url(images/bg-noise.png) repeat;
+}
+</style>
+</head>
+<body>
+
+<abruzzi>
+
+Home
+https://dashboard.dev47.home/d/kVhY0JkWk/home?orgId=1&refresh=5s || Dashboard || fa-angle-right
+http://plex.dev47.home:32400/web/index.html || Plex || fa-angle-right
+https://tank.dev47.home:5001/webman/index.cgi || Synology NAS || fa-angle-right
+https://unifi.ui.com/device/ae0ad68d-08b7-4f2c-87e5-6153f8c2b4b7/network/site/default/dashboard || Unifi Portal || fa-angle-right
+https://pve02.dev47.home:8006 || Proxmox VE 02 || fa-angle-right
+https://iobroker.dev47.home/#tab-instances || ioBroker || fa-angle-right
+http://chronograf.dev47.home:8888/sources/1/chronograf/data-explorer?query=SELECT%20value%20from%20%22temperature%22.%22autogen%22.%22temperature%22%20WHERE%20%22room%22%3D%27wz%27%20ORDER%20BY%20DESC%20LIMIT%205 || Chronograf || fa-angle-right
+http://dns.dev47.home/admin || pi-hole || fa-angle-right
+
+Cloud
+https://a1digital-security.signin.aws.amazon.com/console || AWS Console || fa-angle-right
+https://portal.azure.com || Azure Portal || fa-angle-right
+https://console.cloud.google.com/home/dashboard || Google Cloud Console || fa-angle-right
+https://cloud.digitalocean.com/login || Digital Ocean || fa-angle-right
+https://www.cloudflare.com/a/overview/dev47.net  || Cloudflare || fa-angle-right
+https://my.1password.com/signin?landingPage=%2Fvaults || 1Password || fa-angle-right
+
+Finanzen
+https://login.sparkasse.at/sts/oauth/authorize?response_type=token&client_id=georgeclient || George || fa-angle-right
+https://app.n26.com/ || N26 || fa-angle-right
+https://www.cryptocompare.com/portfolio/ || Crypto Portfolio || fa-angle-right
+https://www.bitstamp.net/account/login/?next=/account/balance/ || Bitstamp || fa-angle-right
+https://www.kraken.com/en-us/login || Kraken || fa-angle-right
+https://www.tradingview.com/chart/?symbol=KRAKEN:XBTEUR || TradingView XBT || fa-angle-right
+https://www.tradingview.com/chart/?symbol=KRAKEN:ETHEUR || TradingView ETH || fa-angle-right
+
+
+
+
+</abruzzi>
+
+<div id="ip_r1"><div id="ip"></div></div>
+<div id="ip_r2"><div id="hostname"></div></div>
+<div id="ip_r3"><div id="org"></div></div>
+<div id="ip_r4"><div id="location"></div></div>
+
+</body>
+</html>
